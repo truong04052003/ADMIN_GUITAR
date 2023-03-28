@@ -14,13 +14,13 @@ include_once './views/LAYOUT/header.php';
                 <th>Email</th>
                 <th>Ảnh </th>
                 <th>Số điện thoại </th>
-                <th>Tùy chọn</th>
+                <th>Hành động</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($rows as $row) : ?>
+            <?php foreach ($rows as $key => $row) : ?>
                 <tr>
-                    <td><?= $row->ID; ?> </td>
+                <td><?= ++$key; ?> </td>
                     <td><?= $row->TENKHACHHANG; ?></td>
                     <td><?= $row->DIACHI; ?></td>
                     <td><?= $row->EMAIL; ?></td>
@@ -28,7 +28,7 @@ include_once './views/LAYOUT/header.php';
                     <td><?= $row->SODIENTHOAI; ?></td>
                     <td>
                         <a href="index.php?controller=Customers&page=edit&id=<?= $row->ID; ?>"  class="btn btn-warning ">Sửa</a> <br>
-                        <a onclick=" return confirm('Are you sure ?'); " href="index.php?controller=Customers&page=delete&id=<?= $row->ID; ?>">Xóa</a>
+                        <a onclick=" return confirm('Are you sure ?'); " href="index.php?controller=Customers&page=delete&id=<?= $row->ID; ?>" class="btn btn-danger">Xóa</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

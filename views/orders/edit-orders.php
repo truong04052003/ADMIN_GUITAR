@@ -7,8 +7,8 @@ include_once './views/LAYOUT/menu.php';
     <h1>Update</h1>
     <form action="" method="post">
         <div class="mb-3">
-            <label class="form-label">TENKHACH</label>
-            <input type="text" class="form-control" name="TENKHACH" value="<?= $row->TENKHACH; ?>"> <br>
+            <label class="form-label">Tổng</label>
+            <input type="text" class="form-control" name="total" value="<?= $row->total; ?>"> <br>
         </div>
         <div class="mb-3">
             <label class="form-label">customer_id</label>

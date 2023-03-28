@@ -10,9 +10,6 @@ class CategoriesController {
     //trang thêm mới
     public function add(){
         if( $_SERVER['REQUEST_METHOD'] == 'POST' ){
-            // echo '<pre>';
-            // print_r($_REQUEST);
-            // echo '</pre>';
             $Categories = new Categories();
             $Categories->store( $_REQUEST );
             header("Location: index.php?controller=Categories&page=list");

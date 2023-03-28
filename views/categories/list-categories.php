@@ -3,23 +3,23 @@ include_once './views/LAYOUT/header.php';
 
 ?>
 <div class="container-fluid px-4">
-    <a href="index.php?controller=Categories&page=add" class="btn btn-danger .col "> Thêm mới </a>
+    <a href="index.php?controller=Categories&page=add" class="btn btn-danger "> Thêm mới </a>
     <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>categories_name</th>
-                <th>ACTION</th>
+                <th>STT</th>
+                <th>Tên thể loại</th>
+                <th>Hành động</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($rows as $row) : ?>
+            <?php foreach ($rows as $key => $row) : ?>
                 <tr>
-                    <td><?= $row->ID; ?> </td>
+                <td><?= ++$key; ?> </td>
                     <td><?= $row->categories_name; ?></td>
                     <td>
-                        <a href="index.php?controller=Categories&page=edit&id=<?= $row->ID; ?>">Edit</a> <br>
-                        <a onclick=" return confirm('Are you sure ?'); " href="index.php?controller=Categories&page=delete&id=<?= $row->ID; ?>">Delete</a>
+                        <a href="index.php?controller=Categories&page=edit&id=<?= $row->ID; ?>" class="btn btn-warning" >Sửa</a> <br>
+                        <a onclick=" return confirm('Are you sure ?'); " href="index.php?controller=Categories&page=delete&id=<?= $row->ID; ?>" class="btn btn-danger ">Xóa</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

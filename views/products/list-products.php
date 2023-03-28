@@ -3,7 +3,7 @@ include_once './views/LAYOUT/header.php';
 
 ?>
 <div class="container-fluid px-4">
-    <a href="index.php?controller=Products&page=add" class="btn btn-danger .col "> Thêm mới </a>
+    <a href="index.php?controller=Products&page=add" class="btn btn-danger "> Thêm mới </a>
     <table class="table">
         <thead>
             <tr>
@@ -23,7 +23,7 @@ include_once './views/LAYOUT/header.php';
                     <td> <img src="<?php echo 'http://localhost/Modul-2/Case%20Study-MVC/views/LAYOUT/assets/img/' ?><?php echo $row->IMAGE ?>" height="100" width="100"> </td>
                     <td>
                         <a  href="index.php?controller=Products&page=edit&id=<?= $row->ID;?>" class="btn btn-warning"  >Sửa</a> <br>
-                        <a onclick=" return confirm('Are you sure ?'); " href="index.php?controller=Products&page=delete&id=<?= $row->ID; ?>" class="btn btn-danger .col ">Xóa</a>
+                        <a onclick=" return confirm('Are you sure ?'); " href="index.php?controller=Products&page=delete&id=<?= $row->ID; ?>" class="btn btn-danger ">Xóa</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

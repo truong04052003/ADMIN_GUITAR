@@ -15,7 +15,6 @@ class Categories
     {
         global $conn;
         $sql = "SELECT * FROM `categories` WHERE ID = $id";
-        // var_dump($sql);die();
         $stmt = $conn->query($sql);
         $stmt->setFetchMode(PDO::FETCH_OBJ); //array => object
         $row = $stmt->fetch();

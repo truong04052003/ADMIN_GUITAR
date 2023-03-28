@@ -24,23 +24,23 @@ class Orders
     public function store($data)
     {
         global $conn;
-        $TENKHACH = $data['TENKHACH'];
+        $total = $data['total'];
         $customer_id  = $data['customer_id'];
         $NGAYDATHANG = $data['NGAYDATHANG'];
         global $conn;
-        $sql = "INSERT INTO `orders`(`TENKHACH`,`customer_id`,`NGAYDATHANG`)
-         VALUES ('$TENKHACH','$customer_id','$NGAYDATHANG') ";
+        $sql = "INSERT INTO `orders`(`total`,`customer_id`,`NGAYDATHANG`)
+         VALUES ('$total','$customer_id','$NGAYDATHANG') ";
         $conn->exec($sql);
     }
     //xu ly them moi
     public function update($id, $data)
     {
         global $conn;
-        $TENKHACH = $data['TENKHACH'];
+        $total = $data['total'];
         $customer_id = $data['customer_id'];
         $NGAYDATHANG = $data['NGAYDATHANG'];
         $sql = "UPDATE `orders` SET 
-        `TENKHACH` = '$TENKHACH',
+        `total` = '$total',
         `customer_id` = '$customer_id',
         `NGAYDATHANG` = '$NGAYDATHANG'
         WHERE `ID` = $id";

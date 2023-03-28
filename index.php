@@ -1,6 +1,5 @@
 <?php
 include_once 'db.php'; //$conn
-// include_once '';
 $controller = 'Customers';
 if (isset($_GET['controller']) && $_GET['controller'] != '') {
     $controller = $_GET['controller'];
